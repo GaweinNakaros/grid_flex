@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox y Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox y Grid</h1>
+
+  <section>
+    <h2>Flexbox</h2>
+
+    <h3>1. Direcciones (Row vs Column)</h3>
+    <div class="flex-ejemplo flex-row">
+      <div class="item rojo">row 1</div>
+      <div class="item verde">row 2</div>
+      <div class="item azul">row 3</div>
+    </div>
+
+    <div class="flex-ejemplo flex-column">
+      <div class="item amarillo">column A</div>
+      <div class="item rosa">column B</div>
+      <div class="item celeste">column C</div>
+    </div>
+
+    <h3>2. Flex Wrap</h3>
+    <div class="flex-ejemplo flex-wrap">
+      <div class="item gris">1</div>
+      <div class="item gris">2</div>
+      <div class="item gris">3</div>
+      <div class="item gris">4</div>
+      <div class="item gris">5</div>
+      <div class="item gris">6</div>
+      <div class="item gris">7</div>
+    </div>
+
+    <h3>3. Justify Content</h3>
+    <div class="flex-ejemplo justify-space-between">
+      <div class="item rojo">A</div>
+      <div class="item verde">B</div>
+      <div class="item azul">C</div>
+    </div>
+
+    <h3>4. Align Items</h3>
+    <div class="flex-ejemplo align-center">
+      <div class="item amarillo" style="height: 40px">1</div>
+      <div class="item rosa" style="height: 80px">2</div>
+      <div class="item celeste" style="height: 120px">3</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Grid</h2>
+
+    <h3>1. Grid Básico</h3>
+    <div class="grid-ejemplo grid-básico">
+      <div class="item rojo">1</div>
+      <div class="item verde">2</div>
+      <div class="item azul">3</div>
+      <div class="item amarillo">4</div>
+      <div class="item rosa">5</div>
+      <div class="item celeste">6</div>
+    </div>
+
+    <h3>2. Grid con Áreas Nombradas</h3>
+    <div class="grid-ejemplo grid-area">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main">Main</div>
+      <div class="footer">Footer</div>
+    </div>
+
+    <h3>3. Grid Responsivo</h3>
+    <div class="grid-ejemplo grid-responsivo">
+      <div class="item rojo">Item 1</div>
+      <div class="item verde">Item 2</div>
+      <div class="item azul">Item 3</div>
+      <div class="item amarillo">Item 4</div>
+      <div class="item rosa">Item 5</div>
+      <div class="item celeste">Item 6</div>
+    </div>
+  </section>
+</body>
+</html>
