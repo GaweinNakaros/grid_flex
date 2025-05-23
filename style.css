@@ -1,4 +1,5 @@
 :root {
+
   --color-text: #fff;
   --color-bg: #222;
   --color-accent: #f39c12;
@@ -38,6 +39,8 @@ h1, h2, h3 {
 /* ---------- FLEXBOX DEMOS ---------- */
 
 .flex-ejemplo {
+  /* Flexbox básico: permite que los ítems se alineen horizontalmente */
+  /*  y se distribuyan uniformemente en el eje principal */
   border: 2px dashed #aaa;
   background: white;
   padding: var(--gap);
@@ -46,15 +49,23 @@ h1, h2, h3 {
 }
 
 /* Row & Column */
+/* Flex row: permite que los ítems se alineen horizontalmente */
+/*  y se distribuyan uniformemente en el eje principal */ 
+/*  y se alineen al inicio del eje transversal */
 .flex-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: var(--gap);
+  gap: var(--gap); /* Espacio entre ítems */
 }
 
 .flex-column {
+  /*  Flex column: permite que los ítems se apilen verticalmente */
+  /*  y se distribuyan uniformemente */   
+  /*  en el eje principal */
+  /*  y se alineen al inicio del eje transversal */ 
+  /*  y se distribuyan uniformemente en el eje transversal */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -63,6 +74,10 @@ h1, h2, h3 {
 }
 
 /* Flex wrap */
+/* Flex wrap: permite que los ítems se ajusten a la siguiente línea */
+/*  si no hay suficiente espacio en la línea actual */
+/*  y se distribuyan uniformemente en el eje principal */ 
+
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +86,9 @@ h1, h2, h3 {
 }
 
 /* Justify Content */
+/* Justify content: permite alinear los ítems en el eje principal */
+/*  y se distribuyan uniformemente en el eje principal */   
+
 .justify-space-between {
   display: flex;
   justify-content: space-between;
@@ -78,6 +96,8 @@ h1, h2, h3 {
 }
 
 /* Align Items */
+/* Align items: permite alinear los ítems en el eje transversal */
+/*  y se distribuyan uniformemente en el eje transversal */
 .align-center {
   display: flex;
   align-items: center;
@@ -87,6 +107,9 @@ h1, h2, h3 {
 /* ---------- GRID DEMOS ---------- */
 
 .grid-ejemplo {
+  /* Grid básico: permite que los ítems se alineen en una cuadrícula */
+  /*  y se distribuyan uniformemente en el eje principal */
+
   display: grid;
   gap: var(--gap);
   background: white;
@@ -96,18 +119,21 @@ h1, h2, h3 {
 }
 
 /* Grid básico: columnas automáticas */
+/* Grid básico: permite que los ítems se alineen en una cuadrícula */
 .grid-básico {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 /* Grid áreas nombradas */
-.grid-area {
+.grid-area {/* Grid áreas nombradas: permite que los ítems se alineen en una cuadrícula */
   grid-template-areas:
     "header header"
     "sidebar main"
     "footer footer";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 2fr;/* 2fr: dos veces el tamaño de 1fr */
+  /* 1fr: una fracción del espacio disponible */  
+  grid-template-rows: auto 1fr auto;/* auto: altura automática */
+  /* 1fr: una fracción del espacio disponible */
 }
 
 .grid-area .header {
@@ -128,24 +154,25 @@ h1, h2, h3 {
 }
 
 /* Grid responsivo con auto-fit y minmax */
+/* Grid responsivo: permite que los ítems se alineen en una cuadrícula */
 .grid-responsivo {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));/* auto-fit: ajusta el número de columnas según el espacio disponible */
 }
 
 /* Accesibilidad y responsividad */
-@media (max-width: 768px) {
-  .flex-row,
-  .justify-space-between,
-  .align-center {
-    flex-direction: column;
+@media (max-width: 768px) { /* Pantallas pequeñas */
+  .flex-row,  /*  Flex row: permite que los ítems se alineen horizontalmente */
+  .justify-space-between,/* Justify content: permite alinear los ítems en el eje principal */
+  .align-center {/* Align items: permite alinear los ítems en el eje transversal */
+    flex-direction: column;/*  Flex column: permite que los ítems se apilen verticalmente */
   }
-
+/* Grid responsivo: permite que los ítems se alineen en una cuadrícula */
   .grid-area {
-    grid-template-areas:
+    grid-template-areas:/*  Grid áreas nombradas: permite que los ítems se alineen en una cuadrícula */
       "header"
       "main"
       "sidebar"
       "footer";
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;/* 1fr: una fracción del espacio disponible */
   }
 }
